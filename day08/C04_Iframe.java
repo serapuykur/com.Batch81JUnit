@@ -10,6 +10,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 public class C04_Iframe {
 
@@ -32,11 +34,19 @@ public class C04_Iframe {
 
     @Test
     public void test1() {
-      //  https://www.youtube.com/embed/owsfdh4gxyc   adresine gidiniz
+
         //Youtube videosunu calistiriniz
-        WebElement youtubeFrame= driver.findElement(By.xpath("//*[@src='https://www.youtube.com/embed/owsfdh4gxyc']"));
-        driver.switchTo().frame(youtubeFrame);
-       driver.findElement(By.xpath("//*[@aria-label='Oynat']")).click();
+        driver.get("https://html.com/tags/iframe/");
+        /*
+        bir web sitesinde bir video(youtube vb) varsa <iframe>tagi icerisindeyse bu videoyu direk locate edip calistirmak
+        dinamik olma cunku link degisebilir ve locatemiz calismaz.
+        bunun icin butun frameleri bir array liste atip index ile framei secip sonrasinda play tusu nu locate edip
+        calistirabiliriz
+         */
+
+       List<WebElement> iframeList=new ArrayList<>(driver.findElements(By.xpath("//iframe")));
+       driver.switchTo().frame(iframeList.get(0));
+       driver.findElement(By.xpath("//*[@aria-label='Oynat']"));
 
     }
 }
