@@ -56,9 +56,12 @@ public class C04_WindowHandle {
          */
 
      //  Acilan yeni pencerenin sayfa başlığının (title) “New Window” oldugunu dogrulayin.
+        Assert.assertEquals(driver.getTitle(),"New Window");
      //  Sayfadaki textin “New Window” olduğunu doğrulayın.
+        Assert.assertTrue(driver.findElement(By.xpath("//h3")).isDisplayed());
      //  Bir önceki pencereye geri döndükten sonra sayfa başlığının “The Internet” olduğunu  doğrulayın.
-
+     driver.switchTo().window(windowList.get(0));
+     Assert.assertEquals("The Internet",driver.getTitle());
 
 
     }
