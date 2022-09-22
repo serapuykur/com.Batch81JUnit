@@ -8,7 +8,7 @@ import utilities.TestBaseBeforeAfter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class C05_FileExists extends TestBaseBeforeAfter {
+public class C05_FileExistsDownload extends TestBaseBeforeAfter {
     @Test
     public void test1() throws InterruptedException {
 
@@ -22,6 +22,8 @@ public class C05_FileExists extends TestBaseBeforeAfter {
         Assert.assertTrue(Files.exists(Paths.get(dosyaYolu)));
         //İndirildiğini konsolda gösterin
         System.out.println(Files.exists(Paths.get(dosyaYolu)));
+
+
     }
 
 }
