@@ -64,7 +64,7 @@ public class C02_WebTables  extends TestBaseBeforeAfter {
                 - <table>
                 - <header> tablonun baslik kismini belirler
                 <tr> veya <th> satirlari
-                <td> satirdaki cell numarasini verir(bunu sutun diye adlandirabiliriz ama kodlarda sutun yoktur)
+                <th> satirdaki cell numarasini verir(bunu sutun diye adlandirabiliriz ama kodlarda sutun yoktur)
                 - <tbody> tablo body'si
                 <tr> satirlari
                 <td> satirdaki cell numarasini verir(bunu sutun diye adlandirabiliriz ama kodlarda sutun yoktur)
